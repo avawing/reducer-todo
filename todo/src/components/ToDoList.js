@@ -7,7 +7,7 @@ function ToDoList(props){
     return (
         <ul>
             {list.map(item => {
-                return <ToDo task = {item.task} key = {item.id}/>
+                return <ToDo task = {item.item} key = {item.id}/>
             })}
         </ul>
     )

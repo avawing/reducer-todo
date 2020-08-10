@@ -1,17 +1,27 @@
-export const initialState = {
-    taskList: [
+export const initialState = [
         {
-            task: 'Learn about reducers',
+            item: 'Learn about reducers',
             completed: false,
             id: 3892987589
+          },
+          {
+            item: 'Learn about reducers',
+            completed: false,
+            id: 3892987591
           }
     ]
-}
 
 export function reducer(state, action){
     switch(action.type){
         case "ADD_TODO" : 
-        return {taskList: [...state.taskList,{ task: action.task, completed: false, id: new Date.now()}]}
+        return [
+            ...state,
+            {
+                item: action.payload,
+                completed: false,
+                id: new Date()
+            }
+        ]
     }
 
 }
