@@ -28,12 +28,15 @@ export function reducer(state, action){
                 if(item.id === action.payload){
                     return{
                         ...item,
-                        completed: true
+                        completed: !item.completed
                     }
                 } else {
                     return item;
                 }
             })
+        
+        case "CLEAR_TODO" :
+            return state.filter(item => item.completed === false)
     }
 
 }

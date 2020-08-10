@@ -7,13 +7,21 @@ function ToDoList(props){
         dispatch({type: 'TOGGLE_TODO', payload: id})
 }
 
+const clearList = (e) => {
+    e.preventDefault()
+    dispatch({type: 'CLEAR_TODO'})
+  }
+
 
     return (
+        <div>
         <ul>
             {list.map(item => {
                 return <ToDo clickHandler = {clickHandler} key = {item.id} item = {item}/>
             })}
         </ul>
+        <button onClick = {clearList}>Clear List</button>
+        </div>
     )
 }
 

@@ -18,6 +18,7 @@ function ToDoForm(props){
             type = 'text' 
             value = {task}
             onChange = {changeHandler}/>
+            <button>Add Task</button>
         </form>
 
     )

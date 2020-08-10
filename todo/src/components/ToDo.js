@@ -5,7 +5,7 @@ function ToDo(props){
 
        
     return(
-        <li onClick={() => clickHandler(item.id)} style = {{textDecoration: item.complete ? 'line-through' : ''}}>{item.item}</li>
+        <li onClick={() => clickHandler(item.id)} style = {{textDecoration: item.completed ? 'line-through' : 'none'}}>{item.item}</li>
 
     )
 }
