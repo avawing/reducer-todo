@@ -1,11 +1,13 @@
 import React from 'react'
+import ToDo from './ToDo'
 
 function ToDoList(props){
     const {list} = props
+    console.log(list)
     return (
         <ul>
             {list.map(item => {
-                <ToDo task = {item.task} key = {item.id}/>
+                return <ToDo task = {item.task} key = {item.id}/>
             })}
         </ul>
     )
