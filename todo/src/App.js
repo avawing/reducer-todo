@@ -14,10 +14,8 @@ function App() {
   return (
     <div className="App">
       <h1>Reducer Todos:</h1>
-      <ToDoList list = {todos}/>
+      <ToDoList list = {todos} dispatch = {dispatch}/>
       <ToDoForm dispatch = {dispatch} task = {task} setTask = {setTask}/>
-
-  <pre>{JSON.stringify(todos, null, 2)}</pre>
     </div>
   );
 }

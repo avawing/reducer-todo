@@ -1,9 +1,11 @@
 import React from 'react'
 
 function ToDo(props){
-    const {task} = props;
+    const {item, clickHandler} = props;
+
+       
     return(
-        <li>{task}</li>
+        <li onClick={() => clickHandler(item.id)} style = {{textDecoration: item.complete ? 'line-through' : ''}}>{item.item}</li>
 
     )
 }

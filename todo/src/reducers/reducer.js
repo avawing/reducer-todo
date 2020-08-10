@@ -22,6 +22,18 @@ export function reducer(state, action){
                 id: new Date()
             }
         ]
+
+        case "TOGGLE_TODO" :
+            return state.map(item => {
+                if(item.id === action.payload){
+                    return{
+                        ...item,
+                        completed: true
+                    }
+                } else {
+                    return item;
+                }
+            })
     }
 
 }
