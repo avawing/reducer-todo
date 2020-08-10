@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
     taskList: [
         {
             item: 'Learn about reducers',
@@ -8,6 +8,6 @@ const initialState = {
     ]
 }
 
-function reducer(){
-
+export function reducer(state, action){
+    return null
 }
