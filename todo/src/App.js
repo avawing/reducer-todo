@@ -14,7 +14,8 @@ function App() {
   return (
     <div className="App">
       <h1>Reducer Todos:</h1>
-      <ToDoForm list = {ToDoList}/>
+      <ToDoList list = {ToDoList}/>
+      <ToDoForm dispatch = {dispatch} />
     </div>
   );
 }

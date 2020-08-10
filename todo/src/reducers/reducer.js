@@ -1,7 +1,7 @@
 export const initialState = {
     taskList: [
         {
-            item: 'Learn about reducers',
+            task: 'Learn about reducers',
             completed: false,
             id: 3892987589
           }
@@ -9,5 +9,9 @@ export const initialState = {
 }
 
 export function reducer(state, action){
-    return null
+    switch(action.type){
+        case "ADD_TODO" : 
+        return {taskList: [...state.taskList,{ task: action.task, completed: false, id: new Date.now()}]}
+    }
+
 }
